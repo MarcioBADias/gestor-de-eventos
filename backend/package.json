@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "gesttão e regras de negocio da aplicação",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcio Dias",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
