@@ -12,7 +12,7 @@ const serviceSchema = new schema({
         required: true
     },
     price: {
-        type:String,
+        type:Number,
         required: true
     },
     image: {
