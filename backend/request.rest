@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "nome do evento",
+    "description": "Sobre o evento",
+    "price": 40,
+    "image": "url de banner"
+}
