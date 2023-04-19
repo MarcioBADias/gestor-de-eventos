@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 const { serviceSchema } = require('./service')
 
-const { schema } = mongoose
+const { Schema } = mongoose
 
 
-const eventSchema = new schema (
+const eventSchema = new Schema(
     {
         title:{
             type: String,
