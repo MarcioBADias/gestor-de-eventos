@@ -3,7 +3,6 @@ const { serviceSchema } = require('./service')
 
 const { Schema } = mongoose
 
-
 const eventSchema = new Schema(
     {
         title:{
