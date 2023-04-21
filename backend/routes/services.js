@@ -11,15 +11,15 @@ router
     .get((req,res) => serviceController.getAll(req,res))
 
 router
-    .route('/service/:id')
+    .route('/services/:id')
     .get((req, res) => serviceController.get(req,res))
 
 router
-    .route('/service/:id')
+    .route('/services/:id')
     .delete((req, res) => serviceController.delete(req,res))
 
 router
-    .route('/service/:id')
-    .put((req, res) => serviceController.put(req,res))
-    
+    .route('/services/:id')
+    .put((req, res) => serviceController.update(req,res))
+
 module.exports = router

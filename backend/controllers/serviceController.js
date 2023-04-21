@@ -14,7 +14,7 @@ const serviceController = {
 
             res
                 .status(201)
-                .json({response, msg: 'serviço criado com sucesso'})
+                .json({ response, msg: 'serviço criado com sucesso'} )
         } catch (error) {
             console.log(error)
         }
