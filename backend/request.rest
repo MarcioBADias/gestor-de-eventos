@@ -14,3 +14,17 @@ GET http://localhost:3000/api/services
 
 ###
 GET http://localhost:3000/api/services/id
+
+###
+DELETE http://localhost:3000/api/services/id
+
+###
+PUT http://localhost:3000/api/services/id
+Content-Type: application/json
+
+{
+    "name": "nome do evento",
+    "description": "Sobre o evento",
+    "price": 40,
+    "image": "url de banner"
+}
