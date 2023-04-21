@@ -25,9 +25,13 @@ const eventController = {
             if(event.services && !checkEventBudget(event.budget, event.service)){
                 res
                     .status(406)
-                    .json({msg: 'o Seu orçamento é insuficiente'})
+                    .json({ msg: 'o Seu orçamento é insuficiente' })
                 return
             }
+
+            const response = await EventModel.create(event)
+
+            res.status(201).json(response, { msg: 'Evento criado com sucesso' })
         } catch (error) {
             console.log(error)
         }

@@ -28,3 +28,41 @@ Content-Type: application/json
     "price": 40,
     "image": "url de banner"
 }
+
+###
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "Heroclix - Draft C.U.R.",
+    "description": "Torneio de Heroclix com draft de booster de comuns e incomuns.",
+    "price": 40,
+    "image": "url de banner"
+}
+
+###
+POST http://localhost:3000/api/events
+Content-Type: application/json
+
+{
+    "title": "Titulo do evento",
+    "author": "Autor",
+    "description": "Descrição e detalhes",
+    "budget": 160,
+    "image": "Link de URL",
+    "services": [
+        {
+            "name": "Serviço 1",
+            "description": "Descrição do serviço",
+            "price": 40,
+            "image": "url de banner"
+        },
+        {
+            "name": "Serviço 2",
+            "description": "Descrição do serviço",
+            "price": 40,
+            "image": "url de banner"
+        }
+    ]
+}
+
