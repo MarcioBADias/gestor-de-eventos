@@ -19,7 +19,7 @@ const eventController = {
                 description: req.body.description,
                 budget: req.body.budget,
                 image: req.body.image,
-                services: req.body.service,
+                services: req.body.services,
             }
 
             if(event.services && !checkEventBudget(event.budget, event.service)){
@@ -31,7 +31,56 @@ const eventController = {
 
             const response = await EventModel.create(event)
 
-            res.status(201).json(response, { msg: 'Evento criado com sucesso' })
+            res
+                .status(201)
+                .json({ response, msg: 'serviço criado com sucesso'} )
+
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    getAll: async (req, res) => {
+        try {
+            const events = await EventModel.find()
+
+            res.json(events)
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    getId: async (req, res) => {
+        try {
+            const id = req.params.id
+            const event = await EventModel.findById(id)
+
+            if(!event){
+                res
+                    .status(404)
+                    .json({ msg: 'Evento não encontrado' })
+                return
+            }
+
+            res.json(event)
+
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    delete: async (req, res) => {
+        try {
+            const id = req.params.id
+            const event = await EventModel.findById(id)
+
+            if(!event){
+                res
+                    .status(404)
+                    .json({ msg: 'Evento não encontrado' })
+            }
+
+            const deleteEvent = await EventModel.findByIdAndDelete(id)
+
+            res.status(200).json({ msg: 'Evento excluído com sucesso!' })
+
         } catch (error) {
             console.log(error)
         }

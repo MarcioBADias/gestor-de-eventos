@@ -28,7 +28,7 @@ const serviceController = {
             console.log(error)
         }
     },
-    get: async (req, res) => {
+    getId: async (req, res) => {
         try {
             const id = req.params.id
             const service = await ServiceModel.findById(id)

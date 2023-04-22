@@ -12,7 +12,7 @@ router
 
 router
     .route('/services/:id')
-    .get((req, res) => serviceController.get(req,res))
+    .get((req, res) => serviceController.getId(req,res))
 
 router
     .route('/services/:id')
