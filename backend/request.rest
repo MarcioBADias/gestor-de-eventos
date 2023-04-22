@@ -74,3 +74,29 @@ GET http://localhost:3000/api/events/6442b4427918c6b9dd6105ed
 
 ###
 DELETE http://localhost:3000/api/events/6442b810d557f32a04297d66
+
+###
+PUT http://localhost:3000/api/events/6442cc27d557f32a04297d68
+Content-Type: application/json
+
+{
+    "title": "Super Week",
+    "author": "Guizarra",
+    "description": "Heroclix Semanal",
+    "budget": 160,
+    "image": "Link de URL",
+    "services": [
+        {
+            "name": "Modern 300",
+            "description": "Regras de torneio Modern",
+            "price": 40,
+            "image": "url de banner"
+        },
+        {
+            "name": "Rookie 300",
+            "description": "Torneio limitado a peças Comuns e Incomuns",
+            "price": 40,
+            "image": "url de banner"
+        }
+    ]
+}

@@ -17,5 +17,9 @@ router
 router
     .route('/events/:id')
     .delete((req,res) => eventController.delete(req,res))
+
+router
+    .route('/events/:id')
+    .put((req,res) => eventController.update(req,res))
     
 module.exports = router

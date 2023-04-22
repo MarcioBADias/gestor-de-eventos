@@ -84,6 +84,30 @@ const eventController = {
         } catch (error) {
             console.log(error)
         }
+    },
+    update: async (req, res) => {
+        const id = req.params.id
+
+        const event = {
+            title: req.body.title,
+            author: req.body.author,
+            description: req.body.description,
+            budget: req.body.budget,
+            image: req.body.image,
+            services: req.body.services,
+        }
+
+        const updateEvent = await EventModel.findByIdAndUpdate(id, event)
+
+        if(!event){
+            res
+                .status(404)
+                .json({ msg: 'Evento não encontrado.' })
+        }
+
+        res
+            .status(200)
+            .json({ msg: 'Evento atualizado com sucesso!' })
     }
 }
 
