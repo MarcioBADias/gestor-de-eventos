@@ -71,3 +71,6 @@ GET http://localhost:3000/api/events
 
 ###
 GET http://localhost:3000/api/events/6442b4427918c6b9dd6105ed
+
+###
+DELETE http://localhost:3000/api/events/6442b810d557f32a04297d66
